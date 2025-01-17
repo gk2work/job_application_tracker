@@ -23,7 +23,6 @@ const Applications = () => {
   };
 
   const getStatusColor = (status) => {
-    console.log(status, "color");
     if (status === "In Progress") {
       return { textColor: "#d7c188", backgroundColor: "#fef9c3" };
     } else if (status === "Rejected") {
@@ -52,8 +51,7 @@ const Applications = () => {
       setEditingIndex(null);
       localStorage.setItem("applicationData", JSON.stringify(data));
     } else {
-      console.log("Form Submitted:", formData);
-      const resultValue = [formData,...applicationData];
+      const resultValue = [formData,...applicationData??[]];
       setApplicationData(resultValue);
       localStorage.setItem("applicationData", JSON.stringify(resultValue));
     }
@@ -72,7 +70,6 @@ const Applications = () => {
   };
 
   useEffect(() => {
-    console.log("res");
     const applicationValue = getApplicatonData();
     setApplicationData(applicationValue);
   }, []);
@@ -91,8 +88,8 @@ const Applications = () => {
             + Add Application{" "}
           </button>
         </div>
-        <div>
-          <table>
+        <div className="table-responsive">
+          <table className="table"> 
             <thead>
               <tr>
                 <th>Job Title</th>
@@ -122,7 +119,7 @@ const Applications = () => {
                     </div>
                   </td>
                   <td>{application.applicationDate}</td>
-                  <td>
+                  <td className="d-flex">
                     <button
                       className="edit-btn me-2"
                       onClick={() => handleEdit(index)}

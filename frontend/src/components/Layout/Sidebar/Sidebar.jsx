@@ -10,9 +10,9 @@ const Sidebar = () => {
 
   return (
     <div className="container-fluid vh-100">
-      <div className="row h-100">
+      <div className="w-100 d-sm-flex h-100">
         {/* Sidebar */}
-        <div className="col-12 col-md-3 bg-light p-0 shadow-sm">
+        <div className="col-md-3 col-12 w-xs-100 bg-light p-0 shadow-sm">
           <ul className="nav flex-column">
             <li
               className={`nav-item py-2 px-3 ${
