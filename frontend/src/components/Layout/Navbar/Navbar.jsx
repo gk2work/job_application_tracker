@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="container-fluid">
-          <a className="navbar-brand">
+          <a className="navbar-brand" href="/applications">
             <h4>JobTracker</h4>
           </a>
           <a className="nav-link" href="/application">

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import Sidebar from './components/Layout/Sidebar/Sidebar';
-import Applications from './components/Applications/Application';
+//import Applications from './components/Applications/Application';
 
 function App() {
   return (

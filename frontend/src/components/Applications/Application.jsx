@@ -53,7 +53,7 @@ const Applications = () => {
       localStorage.setItem("applicationData", JSON.stringify(data));
     } else {
       console.log("Form Submitted:", formData);
-      const resultValue = [...applicationData, formData];
+      const resultValue = [formData,...applicationData];
       setApplicationData(resultValue);
       localStorage.setItem("applicationData", JSON.stringify(resultValue));
     }
